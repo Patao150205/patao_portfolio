@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind": "tailwindcss build styles.css -o ./public/styles.css",
+    "gulp:watch": "gulp",
+    "tailwind": "tailwindcss build -i tailwind.css -o ./public/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.3.4",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.15"
   }
