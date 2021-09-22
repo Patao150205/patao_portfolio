@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body class="relative min-h-screen w-full">
   <div style="background-image: url('./images/balloons.jpg')" class="h-4/5 bg-cover">
-    <header id="header" class="fixed top-0 left-0 w-full transition duration-1000 opacity-90">
+    <header id="header" class="fixed z-50 top-0 left-0 w-full transition duration-1000 opacity-90">
       <div class="px-8 text-white py-2 mx-auto justify-between flex max-w-5xl">
         <h1>
           <img src="./images/favicon.ico" class="inline-block mr-4 w-12 h-12 rounded-full" alt="ぱたおのプロフィール画像" />
@@ -76,27 +76,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="py-40 bg-black bg-opacity-10 md:py-60">
         <h2 style="letter-spacing: -0.08em" class="patao-portfolio px-8 text-center text-white opacity-100 text-8xl font-bold track">
           <div class="inline-block">
-            <span id="signle-char-1">P</span>
-            <span id="signle-char-2">a</span>
-            <span id="signle-char-3">t</span>
-            <span id="signle-char-4">a</span>
-            <span id="signle-char-5">o&nbsp;&nbsp;</span>
-            <span id="signle-char-6">P</span>
-            <span id="signle-char-7">o</span>
-            <span id="signle-char-8">r</span>
-            <span id="signle-char-9">t</span>
-            <span id="signle-char-10">f</span>
-            <span id="signle-char-11">o</span>
-            <span id="signle-char-12">l</span>
-            <span id="signle-char-13">i</span>
-            <span id="signle-char-14">o</span>
+            <span>
+              <span id="signle-char-1">P</span>
+              <span id="signle-char-2">a</span>
+              <span id="signle-char-3">t</span>
+              <span id="signle-char-4">a</span>
+              <span id="signle-char-5">o&nbsp;&nbsp;</span>
+            </span>
+            <span>
+              <span id="signle-char-6">P</span>
+              <span id="signle-char-7">o</span>
+              <span id="signle-char-8">r</span>
+              <span id="signle-char-9">t</span>
+              <span id="signle-char-10">f</span>
+              <span id="signle-char-11">o</span>
+              <span id="signle-char-12">l</span>
+              <span id="signle-char-13">i</span>
+              <span id="signle-char-14">o</span>
+            </span>
           </div>
         </h2>
       </div>
     </main>
   </div>
-  <h3 id="section1" class="sub-header relative text-center text-4xl my-8 pb-4 border-cyan-500">PROFILE</h3>
-  <section class="text-center max-w-5xl space-y-8 py-8 mx-auto px-8 flex flex-col items-center sm:space-x-8 sm:space-y-0 sm:flex-row sm:justify-evenly">
+  <h3 id="section1" class="sub-header relative text-center text-4xl py-8 border-cyan-500">PROFILE</h3>
+  <section class="fade-in fade-in-down text-center max-w-5xl space-y-8 py-16 mx-auto px-8 flex flex-col items-center sm:space-x-8 sm:space-y-0 sm:flex-row sm:justify-evenly">
     <img src="./images/favicon.ico" class="rounded-full w-60 h-60 shadow-xl" />
     <div class="max-w-lg text-left">
       <p>
@@ -109,49 +113,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
   </section>
 
-  <h3 id="section2" class="sub-header relative text-center text-4xl my-8 pb-4 border-cyan-500">SKILL</h3>
-  <div class="p-8 grid row-span-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-    <section class="text-center max-w-5xl mx-auto">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full h-60" src="./images/html-css-logo.jpg" alt="HTML & CSS">
-        <div class="font-bold text-xl mb-2">HTML & CSS</div>
-      </div>
-    </section>
-    <section class="text-center max-w-5xl mx-auto">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full h-60 object-cover" src="./images/javascript.png" alt="javascript">
-        <div class="font-bold text-xl mb-2">javascript</div>
-      </div>
-    </section>
-    <section class="text-center max-w-5xl mx-auto">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full h-60" src="./images/react.png" alt="React.js">
-        <div class="font-bold text-xl mb-2">React.js</div>
-      </div>
-    </section>
-    <section class="text-center max-w-5xl mx-auto">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full h-60" src="./images/node.png" alt="Node.js">
-        <div class="font-bold text-xl mb-2">Node.js</div>
-      </div>
-    </section>
-    <section class="text-center max-w-5xl mx-auto">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full h-60" src="./images/php.jpg" alt="PHP">
-        <div class="font-bold text-xl mb-2">PHP</div>
-      </div>
-    </section>
-    <section class="text-center max-w-5xl mx-auto">
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <img class="w-full h-60" src="./images/laravel.jpg" alt="Laravel">
-        <div class="font-bold text-xl mb-2">Laravel</div>
-      </div>
-    </section>
+  <div class="bg-gray-50">
+    <h3 id="section2" class="sub-header relative text-center text-4xl py-8 pb-4 border-cyan-500">SKILL</h3>
+    <div class="fade-in fade-in-left p-8 grid row-span-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <section class="text-center max-w-5xl mx-auto">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img class="w-full h-60" src="./images/html-css-logo.jpg" alt="HTML & CSS">
+          <div class="font-bold text-xl mb-2">HTML & CSS</div>
+        </div>
+      </section>
+      <section class="text-center max-w-5xl mx-auto">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img class="w-full h-60 object-cover" src="./images/javascript.png" alt="javascript">
+          <div class="font-bold text-xl mb-2">javascript</div>
+        </div>
+      </section>
+      <section class="text-center max-w-5xl mx-auto">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img class="w-full h-60" src="./images/react.png" alt="React.js">
+          <div class="font-bold text-xl mb-2">React.js</div>
+        </div>
+      </section>
+      <section class="text-center max-w-5xl mx-auto">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img class="w-full h-60" src="./images/node.png" alt="Node.js">
+          <div class="font-bold text-xl mb-2">Node.js</div>
+        </div>
+      </section>
+      <section class="text-center max-w-5xl mx-auto">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img class="w-full h-60" src="./images/php.jpg" alt="PHP">
+          <div class="font-bold text-xl mb-2">PHP</div>
+        </div>
+      </section>
+      <section class="text-center max-w-5xl mx-auto">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <img class="w-full h-60" src="./images/laravel.jpg" alt="Laravel">
+          <div class="font-bold text-xl mb-2">Laravel</div>
+        </div>
+      </section>
+    </div>
   </div>
 
 
   <h3 id="section3" class="sub-header text-center relative text-4xl my-8 pb-4 border-cyan-500">WORKS</h3>
-  <article class="works-wrapper p-8 text-center">
+  <article class="fade-in fade-in-right works-wrapper p-8 text-center">
     <section class="text-center max-w-5xl mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden ">
         <img class="w-full" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ">
@@ -221,9 +227,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </section>
   </article>
   <section class="bg-gray-50">
-    <div class=" text-center max-w-2xl mx-auto">
-      <h3 id="section4" class="sub-header  inline-block text-4xl py-8 pb-4 border-cyan-500">CONTACT</h3>
-
+    <h3 id="section4" class="sub-header text-center relative text-4xl py-8 pb-4 border-cyan-500">CONTACT</h3>
+    <div class="fade-in fade-in-up text-center max-w-2xl mx-auto">
       <form action="" method="POST" class="py-8 text-left">
         <input type="hidden" name="csrf" />
 
@@ -281,12 +286,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="scroll"></div>
     TOPへ
   </div>
-  <div class="slide-page relative text-white">
-    <div class="absolute text-center text-8xl leading-32 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <p><i>Welcome</i></p>
-      <p><i>My name is Patao</i></p>
-    </div>
-  </div>
+
   <script src="./js/index.js"></script>
 </body>
 

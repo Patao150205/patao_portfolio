@@ -4,12 +4,26 @@ const section1 = document.getElementById('section1');
 const section2 = document.getElementById('section2');
 const section3 = document.getElementById('section3');
 const section4 = document.getElementById('section4');
+const section1Content = section1.nextElementSibling;
+const section2Content = section2.nextElementSibling;
+const section3Content = section3.nextElementSibling;
+const section4Content = section4.nextElementSibling;
+
 const sessionLength = 5;
-const headerHeight = 100;
-const top1 = section1.getBoundingClientRect().top + scrollY - headerHeight;
-const top2 = section2.getBoundingClientRect().top + scrollY - headerHeight;
-const top3 = section3.getBoundingClientRect().top + scrollY - headerHeight;
-const top4 = section4.getBoundingClientRect().top + scrollY - headerHeight;
+const headerHeight = 300;
+
+let top1 = section1.getBoundingClientRect().top + scrollY - headerHeight;
+let top2 = section2.getBoundingClientRect().top + scrollY - headerHeight;
+let top3 = section3.getBoundingClientRect().top + scrollY - headerHeight;
+let top4 = section4.getBoundingClientRect().top + scrollY - headerHeight;
+
+// ブラウザ幅を変えた時に更新
+window.onresize = function () {
+  top1 = section1.getBoundingClientRect().top + scrollY - headerHeight;
+  top2 = section2.getBoundingClientRect().top + scrollY - headerHeight;
+  top3 = section3.getBoundingClientRect().top + scrollY - headerHeight;
+  top4 = section4.getBoundingClientRect().top + scrollY - headerHeight;
+};
 
 // Nav Menu Items
 const nav0 = document.getElementById('nav-top');
@@ -39,27 +53,44 @@ function toggleNavMenuClass() {
   }
 }
 
+function fadeInContent() {
+  for (let i = 0; i < sessionLength; i++) {
+    if (sectionLocation !== i) {
+      if (i === 0) continue;
+      eval('section' + i + 'Content').classList.remove('scroll-in');
+    } else {
+      if (i === 0) continue;
+      eval('section' + i + 'Content').classList.add('scroll-in');
+    }
+  }
+}
+
 window.onscroll = function () {
   // Nav Menu
   if (0 <= scrollY && scrollY < top1) {
     sectionLocation = 0;
     toggleNavMenuClass();
+    fadeInContent();
   } else if (top1 <= scrollY && scrollY < top2) {
     sectionLocation = 1;
     toggleNavMenuClass();
+    fadeInContent();
   } else if (top2 <= scrollY && scrollY < top3) {
     sectionLocation = 2;
     toggleNavMenuClass();
+    fadeInContent();
   } else if (top3 <= scrollY && scrollY < top4) {
     sectionLocation = 3;
     toggleNavMenuClass();
+    fadeInContent();
   } else if (top4 <= scrollY) {
     sectionLocation = 4;
     toggleNavMenuClass();
+    fadeInContent();
   }
 
+  // Header
   if (scrollY === 0) {
-    // Header
     header.classList.remove('bg-gray-400');
   } else {
     header.classList.add('bg-gray-400');

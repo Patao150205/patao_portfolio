@@ -26,32 +26,25 @@
   }
 } */
 
+// メイン
 .patao-portfolio span {
   display: inline-block;
 }
 
-#signle-char-1 {
-  animation: appear-character 0.5s;
-  color: red;
-}
-#signle-char-2 {
-  animation: appear-character 0.5s;
+@for $i from 1 through 14 {
+  #signle-char-#{$i} {
+    animation: appear-character 1s 0.1s * $i ease-in;
+  }
 }
 
 @keyframes appear-character {
   0% {
     opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: scale(10) translate(-50%, -50%);
+    transform: scale(30);
   }
   100% {
     opacity: 100;
     transform: scale(1);
-  }
-  0%,
-  100% {
-    position: absolute;
   }
 }
 
@@ -74,17 +67,44 @@
   gap: 2rem;
 }
 
-/* その他 */
+// コンテンツ FADE IN アニメーション
+.fade-in {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+}
+
+.fade-in-up {
+  transform: translate(0, 50px);
+}
+
+.fade-in-down {
+  transform: translate(0, -50px);
+}
+
+.fade-in-left {
+  transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+  transform: translate(50px, 0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* トップへボタン */
 .scroll {
   display: inline-block;
   position: absolute;
   top: 34%;
   left: 34%;
-  /* transform: translate(-50%, -50%); */
   padding-top: 70px;
 }
 .scroll::before {
-  animation: scroll 3.5s infinite;
+  animation: allow 3.5s infinite;
   border: solid #000;
   border-width: 1px 1px 0 0;
   content: '';
@@ -98,7 +118,7 @@
   width: 20px;
   height: 20px;
 }
-@keyframes scroll {
+@keyframes allow {
   0% {
     transform: rotate(-45deg) translate(0, 0);
   }

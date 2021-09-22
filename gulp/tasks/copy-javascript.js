@@ -13,7 +13,7 @@ gulp.task('copy-javascript.copy', function (done) {
 });
 
 gulp.task('javascript-watch', function (done) {
-  gulp.watch(`${config.path.input}/javascript/**/*`, gulp.task('copy-javascript')).on('change', () => {
+  gulp.watch(`${config.path.input}/js/**/*`, gulp.task('copy-javascript')).on('change', () => {
     config.browserSync.reload();
   });
   done();

@@ -1,3 +1,4 @@
 node_modules
-public/styles.css
+tailwind.css
 mail.php
+public
