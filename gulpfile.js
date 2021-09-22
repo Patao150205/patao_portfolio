@@ -1,17 +1,14 @@
 const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
+const load = require('require-dir');
+load('./gulp/tasks', { recurse: true });
 
-gulp.task('server', function () {
-  browserSync.init({
-    proxy: 'http://localhost:8888',
-    reloadOnRestart: true,
-  });
-});
+const devTask = [
+  gulp.parallel('compile-sass', 'copy-javascript', 'copy-img', 'copy-php'),
+  'build-server',
+  gulp.parallel('server-watch', 'sass-watch', 'php-watch', 'javascript-watch'),
+];
 
-gulp.task('watch', function () {
-  gulp.watch('./public/**/*').on('change', () => {
-    browserSync.reload();
-  });
-});
+const prodTask = ['copy-img', 'compile-sass', 'minify-javascript', 'copy-php'];
 
-gulp.task('default', gulp.parallel('server', 'watch'));
+gulp.task('dev', gulp.series(devTask));
+gulp.task('prod', gulp.parallel(prodTask));

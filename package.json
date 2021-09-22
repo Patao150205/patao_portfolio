@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp:watch": "gulp",
-    "tailwind": "tailwindcss build -i tailwind.css -o ./public/tailwind.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp:dev": "gulp dev",
+    "gulp:prod": "NODE_ENV=production gulp prod && npm run tailwind",
+    "tailwind": "tailwindcss build -i ./src/tailwind.css -o ./public/css/tailwind.css"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +14,14 @@
   "devDependencies": {
     "autoprefixer": "^10.3.4",
     "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
     "postcss": "^8.3.6",
+    "rename": "^1.0.4",
+    "require-dir": "^1.2.0",
+    "sass": "^1.42.0",
     "tailwindcss": "^2.2.15"
   }
 }
