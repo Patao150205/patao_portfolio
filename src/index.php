@@ -1,36 +1,5 @@
 <?php
 
-use Dotenv\Dotenv;
-
-require_once '../vendor/autoload.php';
-require_once './php/mail.php';
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  Valitron\Validator::lang('ja');
-
-  $v = new Valitron\Validator($_POST);
-  $v->rule('required', ['name', 'email', 'message']);
-  $v->rule('email', ['email']);
-
-  if ($v->validate()) {
-    $isSuccess = \App\Mail\send($_POST['name'], $_POST['email'], $_POST['message']);
-    if ($isSuccess) {
-      $alert = '<script>alert("メッセージの送信に成功しました。")</script>';
-      echo $alert;
-      header('Location: /');
-    } else {
-      $alert = '<script>alert("メッセージの送信に失敗しました。")</script>';
-      echo $alert;
-      header('Location: /');
-    }
-  } else {
-    $errors = $v->errors();
-  }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -239,37 +208,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <form action="" method="POST" class="py-8 text-left">
         <input type="hidden" name="csrf" />
 
-        <?php
-        if (isset($errors['name'])) :
-        ?>
-          <p class="text-center text-red-500"><?php echo $errors['name'][0] ?></p>
-        <?php
-        endif;
-        ?>
+        <div id="validation1" class="text-center text-red-500"></div>
         <div class="relative mt-8 mb-4 px-4">
           <label class="absolute left-6 -top-6" for="name">Name<span class="text-red-500">*</span></label>
-          <input class="outline-none border inline-block w-full border-cyan-500 p-2" value="<?php if ($_POST) echo htmlspecialchars($_POST['name'], ENT_QUOTES | ENT_HTML5) ?>" type="text" name="name" id="name" placeholder="Name" />
+          <input name="name" class="outline-none border inline-block w-full border-cyan-500 p-2" value="<?php if ($_POST) echo htmlspecialchars($_POST['name'], ENT_QUOTES | ENT_HTML5) ?>" type="text" name="name" id="name" placeholder="Name" />
         </div>
-        <?php
-        if (isset($errors['email'])) :
-          foreach ($errors['email'] as $error) :
-        ?>
-            <p class="text-center text-red-500"><?php echo $error  ?></p>
-        <?php
-          endforeach;
-        endif;
-        ?>
+        <div id="validation2" class="text-center text-red-500"></div>
         <div class="relative mt-8 mb-4 px-4">
           <label class="absolute left-6 -top-6" for="email">Email<span class="text-red-500">*</span></label>
-          <input class="outline-none border inline-block w-full border-cyan-500 p-2" value="<?php if ($_POST) echo htmlspecialchars($_POST['email'], ENT_QUOTES | ENT_HTML5) ?>" type="text" name="email" id="email" placeholder="Email" />
+          <input name="email" class="outline-none border inline-block w-full border-cyan-500 p-2" value="<?php if ($_POST) echo htmlspecialchars($_POST['email'], ENT_QUOTES | ENT_HTML5) ?>" type="text" name="email" id="email" placeholder="Email" />
         </div>
-        <?php
-        if (isset($errors['message'])) :
-        ?>
-          <p class="text-center text-red-500"><?php echo $errors['message'][0] ?></p>
-        <?php
-        endif;
-        ?>
+        <div id="validation3" class="text-center text-red-500"></div>
         <div class="relative mt-8 mb-4 px-4 ">
           <label class="absolute left-6 -top-6" for="message">Message <span class="text-red-500">*</span></label>
           <textarea rows="4" name="message" class="text-left inline-block w-full outline-none border border-cyan-500 p-2" placeholder="Message"><?php if ($_POST) echo htmlspecialchars($_POST['name'], ENT_QUOTES | ENT_HTML5) ?></textarea>
@@ -293,7 +242,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="scroll"></div>
     TOPへ
   </div>
-
   <script type="module" src="./js/index.js"></script>
 </body>
 

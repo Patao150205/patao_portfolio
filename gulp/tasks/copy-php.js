@@ -17,9 +17,7 @@ gulp.task('copy-php.copy2', function (done) {
 });
 
 gulp.task('php-watch', function () {
-  gulp.watch([`./php/**/*.php`, './*.php'], { cwd: config.path.input }, gulp.task('copy-php')).on('change', () => {
-    config.browserSync.reload();
-  });
+  gulp.watch([`./php/**/*.php`, './*.php'], { cwd: config.path.input }, gulp.task('copy-php'));
 });
 
 gulp.task('copy-php', gulp.series('copy-php.clean', 'copy-php.copy1', 'copy-php.copy2'));

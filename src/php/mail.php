@@ -1,13 +1,11 @@
 <?php
-
-namespace App\Mail;
-
-require_once('../vendor/autoload.php');
+require_once('../../vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;
 
+// 送信準備
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
@@ -36,7 +34,6 @@ HTML;
 
 	return $html;
 }
-
 
 function send($name, $email, $message)
 {
@@ -68,5 +65,32 @@ function send($name, $email, $message)
 		return true;
 	} catch (Exception $e) {
 		return false;
+	}
+}
+
+// リクエスト受付
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	$json = file_get_contents('php://input');
+	$data =  json_decode($json, true);
+
+	Valitron\Validator::lang('ja');
+
+	$v = new Valitron\Validator($data);
+	$v->rule('required', ['name', 'email', 'message']);
+	$v->rule('email', ['email']);
+
+	if ($v->validate()) {
+		$isSuccess = send($data['name'], $data['email'], $data['message']);
+		if ($isSuccess) {
+			$alert = json_encode(['status' => 'success', 'message' => 'メッセージの送信に成功しました。']);
+			echo $alert;
+		} else {
+			http_response_code(500);
+			echo json_encode(['status' => 'fail', 'message' => 'メッセージの送信に失敗しました。サーバー側の不具合で何らかのトラブルが、発生しています。管理者までお問い合わせください。\n Twiiter DMまで https://twitter.com/Patao_program']);
+		}
+	} else {
+		$errors = $v->errors();
+		http_response_code(422);
+		echo json_encode(['status' => 'fail', 'message' => 'メッセージの送信に失敗しました。入力された値が正しくありません。もう一度お試しください。', 'validation' => $errors]);
 	}
 }
