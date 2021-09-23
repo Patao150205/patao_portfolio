@@ -5,6 +5,12 @@
 html {
   font-size: 14px;
 }
+
+*::selection {
+  background-color: #06b6d4;
+  color: white;
+}
+
 @media (min-width: 640px) {
   html {
     font-size: 16px;
