@@ -10,19 +10,45 @@ const section3Content = section3.nextElementSibling;
 const section4Content = section4.nextElementSibling;
 
 const sessionLength = 5;
-const headerHeight = 300;
+const adjustNavHeight = 90;
+const adjustFadeinHeight = 300;
 
-let top1 = section1.getBoundingClientRect().top + scrollY - headerHeight;
-let top2 = section2.getBoundingClientRect().top + scrollY - headerHeight;
-let top3 = section3.getBoundingClientRect().top + scrollY - headerHeight;
-let top4 = section4.getBoundingClientRect().top + scrollY - headerHeight;
+// for (let i = 1; i <= 4; i++) {
+//   eval('let top' + i + '=' + i + ';');
+//   eval('top' + i + '=' + 'section' + i + '.getBoundingClientRect().top + scrollY;');
+// }
+
+let top1 = section1.getBoundingClientRect().top + scrollY;
+let top2 = section2.getBoundingClientRect().top + scrollY;
+let top3 = section3.getBoundingClientRect().top + scrollY;
+let top4 = section4.getBoundingClientRect().top + scrollY;
+
+let navTop1 = top1 - adjustNavHeight;
+let navTop2 = top2 - adjustNavHeight;
+let navTop3 = top3 - adjustNavHeight;
+let navTop4 = top4 - adjustNavHeight;
+
+let fadeTop1 = top1 - adjustFadeinHeight;
+let fadeTop2 = top2 - adjustFadeinHeight;
+let fadeTop3 = top3 - adjustFadeinHeight;
+let fadeTop4 = top4 - adjustFadeinHeight;
 
 // ブラウザ幅を変えた時に更新
 window.onresize = function () {
-  top1 = section1.getBoundingClientRect().top + scrollY - headerHeight;
-  top2 = section2.getBoundingClientRect().top + scrollY - headerHeight;
-  top3 = section3.getBoundingClientRect().top + scrollY - headerHeight;
-  top4 = section4.getBoundingClientRect().top + scrollY - headerHeight;
+  top1 = section1.getBoundingClientRect().top + scrollY;
+  top2 = section2.getBoundingClientRect().top + scrollY;
+  top3 = section3.getBoundingClientRect().top + scrollY;
+  top4 = section4.getBoundingClientRect().top + scrollY;
+
+  navTop1 = top1 - adjustNavHeight;
+  navTop2 = top2 - adjustNavHeight;
+  navTop3 = top3 - adjustNavHeight;
+  navTop4 = top4 - adjustNavHeight;
+
+  fadeTop1 = top1 - adjustFadeinHeight;
+  fadeTop2 = top2 - adjustFadeinHeight;
+  fadeTop3 = top3 - adjustFadeinHeight;
+  fadeTop4 = top4 - adjustFadeinHeight;
 };
 
 // Nav Menu Items
@@ -32,10 +58,10 @@ const nav2 = document.getElementById('nav-skill');
 const nav3 = document.getElementById('nav-works');
 const nav4 = document.getElementById('nav-contact');
 nav0.onclick = () => scroll(0, 0);
-nav1.onclick = () => scroll(0, top1);
-nav2.onclick = () => scroll(0, top2);
-nav3.onclick = () => scroll(0, top3);
-nav4.onclick = () => scroll(0, top4);
+nav1.onclick = () => scroll(0, navTop1);
+nav2.onclick = () => scroll(0, navTop2);
+nav3.onclick = () => scroll(0, navTop3);
+nav4.onclick = () => scroll(0, navTop4);
 
 const header = document.getElementById('header');
 const navMenu = document.getElementById('nav-menu');
@@ -67,25 +93,38 @@ function fadeInContent() {
 
 window.onscroll = function () {
   // Nav Menu
-  if (0 <= scrollY && scrollY < top1) {
+  if (0 <= scrollY && scrollY < navTop1) {
     sectionLocation = 0;
     toggleNavMenuClass();
-    fadeInContent();
-  } else if (top1 <= scrollY && scrollY < top2) {
+  } else if (navTop1 <= scrollY && scrollY < navTop2) {
     sectionLocation = 1;
     toggleNavMenuClass();
-    fadeInContent();
-  } else if (top2 <= scrollY && scrollY < top3) {
+  } else if (navTop2 <= scrollY && scrollY < navTop3) {
     sectionLocation = 2;
     toggleNavMenuClass();
-    fadeInContent();
-  } else if (top3 <= scrollY && scrollY < top4) {
+  } else if (navTop3 <= scrollY && scrollY < navTop4) {
     sectionLocation = 3;
     toggleNavMenuClass();
-    fadeInContent();
-  } else if (top4 <= scrollY) {
+  } else if (navTop4 <= scrollY) {
     sectionLocation = 4;
     toggleNavMenuClass();
+  }
+
+  // Fadein Contents
+  if (0 <= scrollY && scrollY < fadeTop1) {
+    sectionLocation = 0;
+    fadeInContent();
+  } else if (fadeTop1 <= scrollY && scrollY < fadeTop2) {
+    sectionLocation = 1;
+    fadeInContent();
+  } else if (fadeTop2 <= scrollY && scrollY < fadeTop3) {
+    sectionLocation = 2;
+    fadeInContent();
+  } else if (fadeTop3 <= scrollY && scrollY < fadeTop4) {
+    sectionLocation = 3;
+    fadeInContent();
+  } else if (fadeTop4 <= scrollY) {
+    sectionLocation = 4;
     fadeInContent();
   }
 

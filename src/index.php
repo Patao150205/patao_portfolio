@@ -45,13 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div style="background-image: url('./images/balloons.jpg')" class="h-4/5 bg-cover">
     <header id="header" class="fixed z-50 top-0 left-0 w-full transition duration-1000 opacity-90">
       <div class="px-8 text-white py-2 mx-auto justify-between flex max-w-5xl">
-        <h1>
+        <h1 class="cursor-pointer" onclick="window.scroll(0, 0)">
           <img src="./images/favicon.ico" class="inline-block mr-4 w-12 h-12 rounded-full" alt="ぱたおのプロフィール画像" />
           <p class="inline-block font-bold text-3xl align-middle">Portfolio</p>
         </h1>
         <nav id="nav-menu" class="hidden sm:block">
-          <ul class="flex space-x-12 h-full items-center">
-            <li id="nav-top" class="cursor-pointer transition text-sm hover:text-cyan-300">TOP</li>
+          <ul class="flex space-x-11 h-full items-center">
+            <li id="nav-top" class="cursor-pointer  transition text-sm hover:text-cyan-300">TOP</li>
             <li id="nav-profile" class="cursor-pointer transition text-sm hover:text-cyan-300">PROFILE</li>
             <li id="nav-skill" class="cursor-pointer transition text-sm hover:text-cyan-300">SKILL</li>
             <li id="nav-works" class="cursor-pointer transition text-sm hover:text-cyan-300">WORKS</li>
