@@ -5,6 +5,7 @@ async function sendEmail() {
   btn.setAttribute('disabled', true);
   const form = document.forms[0];
   const data = {
+    csrf_token: form.csrf_token.value,
     name: form.name.value,
     email: form.email.value,
     message: form.message.value,
@@ -15,6 +16,7 @@ async function sendEmail() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
+      credentials: 'same-origin',
     });
     const d = await res.json();
 

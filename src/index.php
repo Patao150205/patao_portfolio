@@ -1,5 +1,9 @@
 <?php
+session_start();
+$toke_byte = openssl_random_pseudo_bytes(16);
+$csrf_token = bin2hex($toke_byte);
 
+$_SESSION['csrf_token'] = $csrf_token;
 ?>
 
 <!DOCTYPE html>
@@ -206,22 +210,22 @@
     <div class="fade-in fade-in-up text-center max-w-2xl mx-auto">
       <p class="pt-8 text-cyan-500 text-left">入力していただいたメールアドレスに、返信させていただきます。お間違えのないようご注意ください！もしくは、TwitterのDMまでメッセージをお願いいたします。</p>
       <form action="" method="POST" class="py-8 text-left">
-        <input type="hidden" name="csrf" />
+        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?>" />
 
         <div id="validation1" class="text-center text-red-500"></div>
         <div class="relative mt-8 mb-4 px-4">
           <label class="absolute left-6 -top-6" for="name">Name<span class="text-red-500">*</span></label>
-          <input name="name" class="outline-none border inline-block w-full border-cyan-500 p-2" value="<?php if ($_POST) echo htmlspecialchars($_POST['name'], ENT_QUOTES | ENT_HTML5) ?>" type="text" name="name" id="name" placeholder="Name" />
+          <input name="name" class="outline-none border inline-block w-full border-cyan-500 p-2" type="text" name="name" id="name" placeholder="Name" />
         </div>
         <div id="validation2" class="text-center text-red-500"></div>
         <div class="relative mt-8 mb-4 px-4">
           <label class="absolute left-6 -top-6" for="email">Email<span class="text-red-500">*</span></label>
-          <input name="email" class="outline-none border inline-block w-full border-cyan-500 p-2" value="<?php if ($_POST) echo htmlspecialchars($_POST['email'], ENT_QUOTES | ENT_HTML5) ?>" type="text" name="email" id="email" placeholder="Email" />
+          <input name="email" class="outline-none border inline-block w-full border-cyan-500 p-2" type="text" name="email" id="email" placeholder="Email" />
         </div>
         <div id="validation3" class="text-center text-red-500"></div>
         <div class="relative mt-8 mb-4 px-4 ">
           <label class="absolute left-6 -top-6" for="message">Message <span class="text-red-500">*</span></label>
-          <textarea rows="4" name="message" class="text-left inline-block w-full outline-none border border-cyan-500 p-2" placeholder="Message"><?php if ($_POST) echo htmlspecialchars($_POST['name'], ENT_QUOTES | ENT_HTML5) ?></textarea>
+          <textarea rows="4" name="message" class="text-left inline-block w-full outline-none border border-cyan-500 p-2" placeholder="Message"></textarea>
         </div>
         <div class="text-center">
           <button id="message-btn" type="button" class="bg-cyan-500 py-2 px-4 shadow-lg hover:bg-cyan-400 rounded-md">メッセージを送信する。</button>
