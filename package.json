@@ -1,19 +1,20 @@
 {
   "name": "my_portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "ぱたおのポートフォリオ",
   "main": "index.js",
   "scripts": {
-    "gulp:dev": "gulp dev",
-    "gulp:prod": "NODE_ENV=production gulp prod && npm run tailwind",
+    "gulp:dev": "cross-env NODE_ENV=development gulp dev",
+    "gulp:prod": "cross-env NODE_ENV=production gulp prod && tailwindcss build -i ./src/tailwind.css -o ./public/css/tailwind.css",
     "tailwind": "tailwindcss build -i ./src/tailwind.css -o ./public/css/tailwind.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "ぱたお",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.3.4",
     "browser-sync": "^2.27.5",
+    "cross-env": "^7.0.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
