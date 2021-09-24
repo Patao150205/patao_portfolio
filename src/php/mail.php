@@ -8,12 +8,12 @@ use Dotenv\Dotenv;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$json = file_get_contents('php://input');
-	$data =  json_decode($json, true);
+	$data = json_decode($json, true);
 
-	if ($_SESSION['csrf_token'] !== $data['csrf_token']) {
+	if (empty($_SESSION) || ($_SESSION['csrf_token'] !== $data['csrf_token'])) {
 		http_response_code(400);
-		print_r($data);
-		echo json_encode(['status' => 'fail', 'message' => 'CSRFエラー']);
+		echo json_encode(['status' => 'csrfError', 'message' => 'CSRFエラー。ブラウザを再読み込みをしてください。']);
+		return;
 	}
 
 	// 送信準備
@@ -33,15 +33,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	function createHTML($name, $email, $message)
 	{
 		$html = <<< HTML
-<h1>ポートフォリオのお問い合わせ</h1>
-<br>
-<p>NAME: $name</p>
-<br>
-<p>EMAIL: $email</p>
-<br>
-<p>MESSAGE: $message</p>
-<br>
-HTML;
+		<h1>ポートフォリオのお問い合わせ</h1>
+		<br>
+		<p>NAME: $name</p>
+		<br>
+		<p>EMAIL: $email</p>
+		<br>
+		<p>MESSAGE: $message</p>
+		<br>
+		HTML;
 
 		return $html;
 	}
@@ -88,15 +88,17 @@ HTML;
 	if ($v->validate()) {
 		$isSuccess = send($data['name'], $data['email'], $data['message']);
 		if ($isSuccess) {
-			$alert = json_encode(['status' => 'success', 'message' => 'メッセージの送信に成功しました。']);
-			echo $alert;
+			echo json_encode(['status' => 'success', 'message' => 'メッセージの送信に成功しました。']);
+			return;
 		} else {
 			http_response_code(500);
-			echo json_encode(['status' => 'fail', 'message' => 'メッセージの送信に失敗しました。サーバー側の不具合で何らかのトラブルが、発生しています。管理者までお問い合わせください。\n Twiiter DMまで https://twitter.com/Patao_program']);
+			echo json_encode(['status' => 'ServerError', 'message' => 'メッセージの送信に失敗しました。サーバー側の不具合で何らかのトラブルが、発生しています。管理者までお問い合わせください。\n Twiiter DMまで https://twitter.com/Patao_program']);
+			return;
 		}
 	} else {
 		$errors = $v->errors();
 		http_response_code(422);
-		echo json_encode(['status' => 'fail', 'message' => 'メッセージの送信に失敗しました。入力された値が正しくありません。もう一度お試しください。', 'validation' => $errors]);
+		echo json_encode(['status' => 'validationError', 'message' => 'メッセージの送信に失敗しました。入力された値が正しくありません。もう一度お試しください。', 'validation' => $errors]);
+		return;
 	}
 }

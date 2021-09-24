@@ -35,12 +35,9 @@ gulp.task('minify-img.minify', function (done) {
 });
 
 gulp.task('img-watch', function (done) {
-  gulp
-    .watch(`${config.path.input}/images/**/*`)
-    .pipe(gulp.task('minify-img'))
-    .on('change', () => {
-      config.browserSync.reload();
-    });
+  gulp.watch(`${config.path.input}/images/**/*`, gulp.task('minify-img.minify')).on('change', () => {
+    config.browserSync.reload();
+  });
   done();
 });
 

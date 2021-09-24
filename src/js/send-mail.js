@@ -25,35 +25,43 @@ async function sendEmail() {
     const messageValidation = document.getElementById('validation3');
 
     if (res.ok) {
-      const message = d.message;
-      alert(message);
       form.name.value = '';
       form.email.value = '';
       form.message.value = '';
       nameValidation.innerHTML = '';
       mailValidation.innerHTML = '';
       messageValidation.innerHTML = '';
-    } else {
-      const validation = d.validation;
-
-      const html = (message) => `<p>${message}</p>`;
-      nameValidation.innerHTML = '';
-      mailValidation.innerHTML = '';
-      messageValidation.innerHTML = '';
-      if (validation.name) {
-        nameValidation.insertAdjacentHTML('beforeend', html(validation.name[0]));
-      }
-      if (validation.email) {
-        validation.email?.forEach((ele) => {
-          mailValidation.insertAdjacentHTML('beforeend', html(ele));
-        });
-      }
-      if (validation.message) {
-        messageValidation.insertAdjacentHTML('beforeend', html(validation.message[0]));
-      }
       alert(d.message);
+    } else {
+      if (res.status === 422 && d.status === 'validationError') {
+        const validation = d.validation;
+
+        const html = (message) => `<p>${message}</p>`;
+        nameValidation.innerHTML = '';
+        mailValidation.innerHTML = '';
+        messageValidation.innerHTML = '';
+        if (validation.name) {
+          nameValidation.insertAdjacentHTML('beforeend', html(validation.name[0]));
+        }
+        if (validation.email) {
+          validation.email?.forEach((ele) => {
+            mailValidation.insertAdjacentHTML('beforeend', html(ele));
+          });
+        }
+        if (validation.message) {
+          messageValidation.insertAdjacentHTML('beforeend', html(validation.message[0]));
+        }
+        alert(d.message);
+      } else if (res.status === 400 && d.status === 'csrfError') {
+        alert(d.message);
+      } else {
+        alert(
+          'メッセージの送信に失敗しました。サーバー側の不具合で何らかのトラブルが、発生しています。管理者までお問い合わせください。\n Twiiter DMまで https://twitter.com/Patao_program'
+        );
+      }
     }
   } catch (error) {
+    console.log(error);
     alert(error.message);
   } finally {
     btn.removeAttribute('disabled', false);

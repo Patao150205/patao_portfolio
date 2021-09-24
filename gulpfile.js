@@ -8,7 +8,7 @@ const devTask = [
   gulp.parallel('server-watch', 'img-watch', 'sass-watch', 'php-watch', 'javascript-watch'),
 ];
 
-const prodTask = ['minify-img', 'compile-sass', 'minify-javascript', 'copy-php'];
+const prodTask = ['minify-img', 'compile-sass', 'minify-javascript', 'minify-php'];
 
 gulp.task('dev', gulp.series(devTask));
 gulp.task('prod', gulp.parallel(prodTask));

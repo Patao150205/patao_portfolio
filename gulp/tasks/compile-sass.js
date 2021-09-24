@@ -19,7 +19,6 @@ gulp.task('compile-sass.compile', function (done) {
 gulp.task('compile-sass', gulp.series('compile-sass.clean', 'compile-sass.compile'));
 
 gulp.task('sass-watch', function () {
-  console.log(`${config.path.input}/sass/**/*.scss`);
   gulp.watch(`${config.path.input}/sass/**/*.scss`, gulp.task('compile-sass')).on('change', () => {
     config.browserSync.reload();
   });
