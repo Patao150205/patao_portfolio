@@ -4,7 +4,7 @@ const config = require('../config');
 const del = require('del');
 
 gulp.task('compile-sass.clean', function (done) {
-  del(`${config.path.output}/js/**/*`);
+  del(`${config.path.output}/css/styles.css`);
   done();
 });
 

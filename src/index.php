@@ -20,7 +20,7 @@ $_SESSION['csrf_token'] = $csrf_token;
   <title>Patao Portfolio</title>
 </head>
 
-<body class="relative min-h-screen w-full">
+<body class="relative max-h-screen w-full">
   <div style="background-image: url('./images/balloons.jpg')" class="h-4/5 bg-cover">
     <header id="header" class="fixed z-50 top-0 left-0 w-full transition duration-1000 opacity-90">
       <div class="px-8 text-white py-2 mx-auto justify-between flex max-w-5xl">
@@ -30,30 +30,42 @@ $_SESSION['csrf_token'] = $csrf_token;
         </h1>
         <nav id="nav-menu" class="hidden sm:block">
           <ul class="flex space-x-11 h-full items-center">
-            <li id="nav-top" class="cursor-pointer  transition text-sm hover:text-cyan-300">TOP</li>
-            <li id="nav-profile" class="cursor-pointer transition text-sm hover:text-cyan-300">PROFILE</li>
-            <li id="nav-skill" class="cursor-pointer transition text-sm hover:text-cyan-300">SKILL</li>
-            <li id="nav-works" class="cursor-pointer transition text-sm hover:text-cyan-300">WORKS</li>
-            <li id="nav-contact" class="cursor-pointer transition text-sm hover:text-cyan-300">CONTACT</li>
+            <li name="nav-top" class="cursor-pointer  transition text-sm hover:text-cyan-300">TOP</li>
+            <li name="nav-profile" class="cursor-pointer transition text-sm hover:text-cyan-300">PROFILE</li>
+            <li name="nav-skill" class="cursor-pointer transition text-sm hover:text-cyan-300">SKILL</li>
+            <li name="nav-works" class="cursor-pointer transition text-sm hover:text-cyan-300">WORKS</li>
+            <li name="nav-contact" class="cursor-pointer transition text-sm hover:text-cyan-300">CONTACT</li>
           </ul>
         </nav>
-        <span style="padding-top: 0.35rem" class="
+        <span id="hamburger" style="padding-top: 0.35rem" class="
               fas
               fa-bars
               sm:hidden
               transition
               inline-block
               border-2
-              px-3
+              w-12
+              h-12
+              text-center
               text-2xl
               cursor-pointer
               hover:bg-cyan-500
             "></span>
       </div>
+      <!-- Navigation Header Small -->
+      <nav id="nav-header-small" class="sm:hidden invisible h-0 opacity-0 transition duration-700 bg-white">
+        <ul>
+          <li name="nav-top" class="cursor-pointer py-4 border border-l-8 border-gray-400 pl-12 text-lg transition hover:border-black hover:text-cyan-300">TOP</li>
+          <li name="nav-profile" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">PROFILE</li>
+          <li name="nav-skill" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">SKILL</li>
+          <li name="nav-works" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">WORKS</li>
+          <li name="nav-contact" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">CONTACT</li>
+        </ul>
+      </nav>
     </header>
     <main>
       <div class="py-40 bg-black bg-opacity-10 md:py-60">
-        <h2 style="letter-spacing: -0.08em" class="patao-portfolio px-8 text-center text-white opacity-100 text-8xl font-bold track">
+        <h2 style="letter-spacing: -0.08em" class="patao-portfolio px-8 text-center text-white opacity-100 text-7xl sm:text-8xl font-bold track">
           <div class="inline-block">
             <span>
               <span id="signle-char-1">P</span>
@@ -136,12 +148,12 @@ $_SESSION['csrf_token'] = $csrf_token;
 
 
   <h3 id="section3" class="sub-header text-center relative text-4xl my-8 pb-4 border-cyan-500">WORKS</h3>
-  <article class="fade-in fade-in-right works-wrapper p-8 text-center">
-    <section class="text-center max-w-5xl mx-auto">
-      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden ">
+  <article class="fade-in fade-in-right text-center works-wrapper p-8 max-w-7xl mx-auto">
+    <section class="text-center mx-auto">
+      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">ぬいぐるみショップ</div>
+          <div class="font-bold text-xl mb-2 mt-2">ぬいぐるみショップ</div>
           <p class="text-gray-700 text-base">
             かわいいぬいぐるみたちを心も穏やかに癒やされる、そんなぬいぐるみたちのショップです！
           </p>
@@ -153,8 +165,7 @@ $_SESSION['csrf_token'] = $csrf_token;
         </div>
       </div>
     </section>
-
-    <section class="text-center max-w-5xl mx-auto">
+    <section class="mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Quize_de_pon.png" alt="クイズでぽん！！">
         <div class="px-6 py-4">
@@ -171,7 +182,7 @@ $_SESSION['csrf_token'] = $csrf_token;
       </div>
     </section>
 
-    <section class="text-center max-w-5xl mx-auto">
+    <section class="text-center mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Studious.png" alt="学習管理アプリ">
         <div class="px-6 py-4">
@@ -187,7 +198,7 @@ $_SESSION['csrf_token'] = $csrf_token;
       </div>
     </section>
 
-    <section class="text-center max-w-5xl mx-auto">
+    <section class="text-center mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Portfolio.png" alt="ポートフォリオ">
         <div class="px-6 py-4">
@@ -206,29 +217,29 @@ $_SESSION['csrf_token'] = $csrf_token;
     </section>
   </article>
   <section class="bg-gray-50">
-    <h3 id="section4" class="sub-header text-center relative text-4xl py-8 pb-4 border-cyan-500">CONTACT</h3>
-    <div class="fade-in fade-in-up text-center max-w-2xl mx-auto">
+    <h3 id="section4" class="sub-header text-center relative text-4xl py-8 pb-4 px-4 border-cyan-500">CONTACT</h3>
+    <div class="fade-in fade-in-up text-center max-w-2xl mx-auto px-4">
       <p class="pt-8 text-cyan-500 text-left">入力していただいたメールアドレスに、返信させていただきます。お間違えのないようご注意ください！もしくは、TwitterのDMまでメッセージをお願いいたします。</p>
       <form action="" method="POST" class="py-8 text-left">
         <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?>" />
 
         <div id="validation1" class="text-center text-red-500"></div>
-        <div class="relative mt-8 mb-4 px-4">
+        <div class="relative mt-8 mb-4">
           <label class="absolute left-6 -top-6" for="name">Name<span class="text-red-500">*</span></label>
           <input name="name" class="outline-none border inline-block w-full border-cyan-500 p-2" type="text" name="name" id="name" placeholder="Name" />
         </div>
         <div id="validation2" class="text-center text-red-500"></div>
-        <div class="relative mt-8 mb-4 px-4">
+        <div class="relative mt-8 mb-4">
           <label class="absolute left-6 -top-6" for="email">Email<span class="text-red-500">*</span></label>
           <input name="email" class="outline-none border inline-block w-full border-cyan-500 p-2" type="text" name="email" id="email" placeholder="Email" />
         </div>
         <div id="validation3" class="text-center text-red-500"></div>
-        <div class="relative mt-8 mb-4 px-4 ">
+        <div class="relative mt-8 mb-4 ">
           <label class="absolute left-6 -top-6" for="message">Message <span class="text-red-500">*</span></label>
           <textarea rows="4" name="message" class="text-left inline-block w-full outline-none border border-cyan-500 p-2" placeholder="Message"></textarea>
         </div>
         <div class="text-center">
-          <button id="message-btn" type="button" class="bg-cyan-500 py-2 px-4 shadow-lg hover:bg-cyan-400 rounded-md">メッセージを送信する。</button>
+          <button id="message-btn" type="button" class="bg-cyan-500 py-2 px-4 shadow-lg my-8 sm:my-0 hover:bg-cyan-400 rounded-md">メッセージを送信する。</button>
         </div>
       </form>
     </div>

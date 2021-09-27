@@ -26,6 +26,27 @@ let fadeTop2 = top2 - adjustFadeinHeight;
 let fadeTop3 = top3 - adjustFadeinHeight;
 let fadeTop4 = top4 - adjustFadeinHeight;
 
+const navHeaderSm = document.getElementById('nav-header-small');
+const hamburger = document.getElementById('hamburger');
+
+// ハンバーガーメニュー
+hamburger.onclick = function () {
+  const isOpen = hamburger.classList.contains('fa-times');
+  if (!isOpen) {
+    hamburger.classList.remove('fa-bars');
+    hamburger.classList.add('fa-times');
+    navHeaderSm.classList.remove('h-0', 'invisible', 'opacity-0');
+  } else {
+    closeNavHeaderSm();
+  }
+};
+
+function closeNavHeaderSm() {
+  hamburger.classList.remove('fa-times');
+  hamburger.classList.add('fa-bars');
+  navHeaderSm.classList.add('opacity-0', 'invisible', 'h-0');
+}
+
 // ブラウザ幅を変えた時に更新
 window.onresize = function () {
   top1 = section1.getBoundingClientRect().top + scrollY;
@@ -45,16 +66,42 @@ window.onresize = function () {
 };
 
 // Nav Menu Items
-const nav0 = document.getElementById('nav-top');
-const nav1 = document.getElementById('nav-profile');
-const nav2 = document.getElementById('nav-skill');
-const nav3 = document.getElementById('nav-works');
-const nav4 = document.getElementById('nav-contact');
-nav0.onclick = () => scroll(0, 0);
-nav1.onclick = () => scroll(0, navTop1);
-nav2.onclick = () => scroll(0, navTop2);
-nav3.onclick = () => scroll(0, navTop3);
-nav4.onclick = () => scroll(0, navTop4);
+const nav0 = document.getElementsByName('nav-top');
+const nav1 = document.getElementsByName('nav-profile');
+const nav2 = document.getElementsByName('nav-skill');
+const nav3 = document.getElementsByName('nav-works');
+const nav4 = document.getElementsByName('nav-contact');
+
+nav0.forEach((ele) => {
+  ele.onclick = () => {
+    scroll(0, 0);
+    closeNavHeaderSm();
+  };
+});
+nav1.forEach((ele) => {
+  ele.onclick = () => {
+    scroll(0, navTop1);
+    closeNavHeaderSm();
+  };
+});
+nav2.forEach((ele) => {
+  ele.onclick = () => {
+    scroll(0, navTop2);
+    closeNavHeaderSm();
+  };
+});
+nav3.forEach((ele) => {
+  ele.onclick = () => {
+    scroll(0, navTop3);
+    closeNavHeaderSm();
+  };
+});
+nav4.forEach((ele) => {
+  ele.onclick = () => {
+    scroll(0, navTop4);
+    closeNavHeaderSm();
+  };
+});
 
 const header = document.getElementById('header');
 const navMenu = document.getElementById('nav-menu');
@@ -65,9 +112,13 @@ let sectionLocation = 0;
 function toggleNavMenuClass() {
   for (let i = 0; i < sessionLength; i++) {
     if (sectionLocation !== i) {
-      eval('nav' + i).classList.remove('text-cyan-400');
+      eval('nav' + i).forEach((ele) => {
+        ele.classList.remove('text-cyan-400');
+      });
     } else {
-      eval('nav' + i).classList.add('text-cyan-400');
+      eval('nav' + i).forEach((ele) => {
+        ele.classList.add('text-cyan-400');
+      });
     }
   }
 }
@@ -82,6 +133,10 @@ function fadeInContent() {
       eval('section' + i + 'Content').classList.add('scroll-in');
     }
   }
+}
+
+function toggleNavHeaderSm() {
+  navHeaderSm;
 }
 
 window.onscroll = function () {
@@ -127,6 +182,7 @@ window.onscroll = function () {
   } else {
     header.classList.add('bg-gray-400');
   }
+
   // Scroll
   if (scrollY > 200) {
     toTopElement.classList.remove('opacity-0', 'invisible');

@@ -27,6 +27,7 @@
     "imagemin-pngquant": "^9.0.2",
     "postcss": "^8.3.7",
     "postcss-cli": "^8.3.1",
+    "rename": "^1.0.4",
     "require-dir": "^1.2.0",
     "sass": "^1.42.0",
     "tailwindcss": "^2.2.15"
