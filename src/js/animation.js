@@ -27,9 +27,7 @@ window.onresize = function () {};
 
 // Nav Menu Items
 const navs = document.getElementsByName('nav');
-
 const target = document.getElementsByName('section');
-console.log(target);
 
 for (let i = 0; i < navs.length; i++) {
   if (i !== 0) {
@@ -45,10 +43,10 @@ for (let i = 0; i < navs.length; i++) {
   }
 }
 
-const navTop1 = target[0].getBoundingClientRect().top - headerHeight;
-const navTop2 = target[1].getBoundingClientRect().top - headerHeight;
-const navTop3 = target[2].getBoundingClientRect().top - headerHeight;
-const navTop4 = target[3].getBoundingClientRect().top - headerHeight;
+const navTop1 = target[0].getBoundingClientRect().top + scrollY - headerHeight;
+const navTop2 = target[1].getBoundingClientRect().top + scrollY - headerHeight;
+const navTop3 = target[2].getBoundingClientRect().top + scrollY - headerHeight;
+const navTop4 = target[3].getBoundingClientRect().top + scrollY - headerHeight;
 
 function toggleNavMenuClass(nav_num) {
   for (let i = 0; i < navs.length; i++) {
@@ -60,13 +58,7 @@ function toggleNavMenuClass(nav_num) {
   }
 }
 
-for (let i = 0; i < target.length; i++) {
-  console.log(
-    Math.floor(target[i].getBoundingClientRect().top),
-    Math.floor(target[i].getBoundingClientRect().bottom),
-    i
-  );
-}
+toggleNavMenuClass();
 
 function fadeInContent() {
   const position = Math.floor(window.innerHeight * 0.75);
@@ -79,7 +71,6 @@ function fadeInContent() {
     }
 
     if (offsetBottom < 0) {
-      console.log(offsetBottom);
       ele.nextElementSibling.classList.remove('scroll-in');
     }
   });
