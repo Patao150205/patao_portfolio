@@ -20,7 +20,7 @@ $_SESSION['csrf_token'] = $csrf_token;
   <title>Patao Portfolio</title>
 </head>
 
-<body class="relative max-h-screen w-full">
+<body id="section" class="relative max-h-screen w-full">
   <div style="background-image: url('./images/balloons.jpg')" class="h-4/5 bg-cover">
     <header id="header" class="fixed z-50 top-0 left-0 w-full transition duration-1000 opacity-90">
       <div class="px-8 text-white py-2 mx-auto justify-between flex max-w-5xl">
@@ -30,11 +30,11 @@ $_SESSION['csrf_token'] = $csrf_token;
         </h1>
         <nav id="nav-menu" class="hidden sm:block">
           <ul class="flex space-x-11 h-full items-center">
-            <li name="nav-top" class="cursor-pointer  transition text-sm hover:text-cyan-300">TOP</li>
-            <li name="nav-profile" class="cursor-pointer transition text-sm hover:text-cyan-300">PROFILE</li>
-            <li name="nav-skill" class="cursor-pointer transition text-sm hover:text-cyan-300">SKILL</li>
-            <li name="nav-works" class="cursor-pointer transition text-sm hover:text-cyan-300">WORKS</li>
-            <li name="nav-contact" class="cursor-pointer transition text-sm hover:text-cyan-300">CONTACT</li>
+            <li name="nav" class="cursor-pointer  transition text-sm hover:text-cyan-300">TOP</li>
+            <li name="nav" class="cursor-pointer transition text-sm hover:text-cyan-300">PROFILE</li>
+            <li name="nav" class="cursor-pointer transition text-sm hover:text-cyan-300">SKILL</li>
+            <li name="nav" class="cursor-pointer transition text-sm hover:text-cyan-300">WORKS</li>
+            <li name="nav" class="cursor-pointer transition text-sm hover:text-cyan-300">CONTACT</li>
           </ul>
         </nav>
         <span id="hamburger" style="padding-top: 0.35rem" class="
@@ -90,7 +90,7 @@ $_SESSION['csrf_token'] = $csrf_token;
       </div>
     </main>
   </div>
-  <h3 id="section1" class="sub-header relative text-center text-4xl py-8 border-cyan-500">PROFILE</h3>
+  <h3 name="section" class="sub-header relative text-center text-4xl py-8 border-cyan-500">PROFILE</h3>
   <section class="fade-in fade-in-down text-center max-w-5xl space-y-8 py-16 mx-auto px-8 flex flex-col items-center sm:space-x-8 sm:space-y-0 sm:flex-row sm:justify-evenly">
     <img src="./images/favicon.ico" class="rounded-full w-60 h-60 shadow-xl" />
     <div class="max-w-lg text-left">
@@ -105,8 +105,8 @@ $_SESSION['csrf_token'] = $csrf_token;
   </section>
 
   <div class="bg-gray-50">
-    <h3 id="section2" class="sub-header relative text-center text-4xl py-8 pb-4 border-cyan-500">SKILL</h3>
-    <div class="fade-in fade-in-left p-8 grid row-span-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <h3 name="section" class="sub-header relative text-center text-4xl py-8 pb-4 border-cyan-500">SKILL</h3>
+    <div class="fade-in fade-in-up p-8 grid row-span-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
       <section class="text-center max-w-5xl mx-auto">
         <div class="max-w-sm rounded overflow-hidden shadow-lg">
           <img class="w-full h-60" src="./images/html-css-logo.jpg" alt="HTML & CSS">
@@ -147,9 +147,9 @@ $_SESSION['csrf_token'] = $csrf_token;
   </div>
 
 
-  <h3 id="section3" class="sub-header text-center relative text-4xl my-8 pb-4 border-cyan-500">WORKS</h3>
-  <article class="fade-in fade-in-right text-center works-wrapper p-8 max-w-7xl mx-auto">
-    <section class="text-center mx-auto">
+  <h3 name="section" class="sub-header text-center relative text-4xl my-8 pb-4 border-cyan-500">WORKS</h3>
+  <article class="fade-in fade-in-down text-center works-wrapper p-8 max-w-7xl mx-auto">
+    <section class="mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ">
         <div class="px-6 py-4">
@@ -182,7 +182,7 @@ $_SESSION['csrf_token'] = $csrf_token;
       </div>
     </section>
 
-    <section class="text-center mx-auto">
+    <section class="mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Studious.png" alt="学習管理アプリ">
         <div class="px-6 py-4">
@@ -198,7 +198,7 @@ $_SESSION['csrf_token'] = $csrf_token;
       </div>
     </section>
 
-    <section class="text-center mx-auto">
+    <section class="mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Portfolio.png" alt="ポートフォリオ">
         <div class="px-6 py-4">
@@ -217,7 +217,7 @@ $_SESSION['csrf_token'] = $csrf_token;
     </section>
   </article>
   <section class="bg-gray-50">
-    <h3 id="section4" class="sub-header text-center relative text-4xl py-8 pb-4 px-4 border-cyan-500">CONTACT</h3>
+    <h3 name="section" class="sub-header text-center relative text-4xl py-8 pb-4 px-4 border-cyan-500">CONTACT</h3>
     <div class="fade-in fade-in-up text-center max-w-2xl mx-auto px-4">
       <p class="pt-8 text-cyan-500 text-left">入力していただいたメールアドレスに、返信させていただきます。お間違えのないようご注意ください！もしくは、TwitterのDMまでメッセージをお願いいたします。</p>
       <form action="" method="POST" class="py-8 text-left">
