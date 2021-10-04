@@ -55,9 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$mail->SMTPDebug = 0;
 			$mail->SMTPAuth   = true;   // SMTP authentication を有効に
 			$mail->isSMTP(true);   // SMTP を使用
-			$mail->Host       = 'smtp.mail.yahoo.co.jp';  // SMTP サーバーを指定
-			$mail->Username   = $_ENV['YAHOO_FROM_USER_NAME'];  // SMTP ユーザ名
-			$mail->Password   = $_ENV['YAHOO_USER_PASSWORD'];  // SMTP パスワード
+			$mail->Host       = 'smtp.sendgrid.net';  // SMTP サーバーを指定
+			$mail->Username   = 'apikey';  // SMTP ユーザ名
+			$mail->Password   = $_ENV['MAIL_USER_PASSWORD'];  // SMTP パスワード
 			$mail->SMTPSecure = 'ssl';  // 暗号化を有効に
 			$mail->Port       = 465;  // TCP ポートを指定
 

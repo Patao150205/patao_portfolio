@@ -17,7 +17,7 @@ $_SESSION['csrf_token'] = $csrf_token;
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/tailwind.css" />
   <link rel="stylesheet" href="./css/styles.css" />
-  <title>Patao Portfolio</title>
+  <title>Mizuki Portfolio</title>
 </head>
 
 <body id="section" class="relative max-h-screen w-full">
@@ -68,22 +68,23 @@ $_SESSION['csrf_token'] = $csrf_token;
         <h2 style="letter-spacing: -0.08em" class="patao-portfolio px-8 text-center text-white opacity-100 text-7xl sm:text-8xl font-bold track">
           <div class="inline-block">
             <span>
-              <span id="signle-char-1">P</span>
-              <span id="signle-char-2">a</span>
-              <span id="signle-char-3">t</span>
-              <span id="signle-char-4">a</span>
-              <span id="signle-char-5">o&nbsp;&nbsp;</span>
+              <span id="signle-char-1">M</span>
+              <span id="signle-char-2">i</span>
+              <span id="signle-char-3">z</span>
+              <span id="signle-char-4">u</span>
+              <span id="signle-char-5">k</span>
+              <span id="signle-char-6">i&nbsp;&nbsp;</span>
             </span>
             <span>
-              <span id="signle-char-6">P</span>
-              <span id="signle-char-7">o</span>
-              <span id="signle-char-8">r</span>
-              <span id="signle-char-9">t</span>
-              <span id="signle-char-10">f</span>
-              <span id="signle-char-11">o</span>
-              <span id="signle-char-12">l</span>
-              <span id="signle-char-13">i</span>
-              <span id="signle-char-14">o</span>
+              <span id="signle-char-7">P</span>
+              <span id="signle-char-8">o</span>
+              <span id="signle-char-9">r</span>
+              <span id="signle-char-10">t</span>
+              <span id="signle-char-11">f</span>
+              <span id="signle-char-12">o</span>
+              <span id="signle-char-13">l</span>
+              <span id="signle-char-14">i</span>
+              <span id="signle-char-15zzz">o</span>
             </span>
           </div>
         </h2>
@@ -95,12 +96,12 @@ $_SESSION['csrf_token'] = $csrf_token;
     <img src="./images/favicon.ico" class="rounded-full w-60 h-60 shadow-xl" />
     <div class="max-w-lg text-left">
       <p>
-        　はじめまして！こんにちは。平成15年生まれ、18歳のぱたお<a href="https://twitter.com/Patao_program" class="text-cyan-500">@Patao_program</a>です。
+        　はじめまして！こんにちは。平成15年生まれ、18歳のみずき<a href="https://twitter.com/Patao_program" class="text-cyan-500">@Patao_program</a>です。
       </p>
 
-      <p>　プログラミングは、高3の11月に始めました。以来、プログラミングを使い、自分でものを作りだすということに、楽しさを覚え、サーバーサイドエンジニアになることを目指すきっかけになりました！</p>
-      <p>　高校卒業後は、その目標に向かって、独学でプログラミングを学習を続けています。</p>
-      <p>ひよっこの僕ですが、早くから、現場で働き、一人前のエンジニアとして成長していきたいです！！</p>
+      <p>　プログラミングは、高3の時に始めました。以来、プログラミングを使い、自分でものを作りだすということに、楽しさを覚え、サーバーサイドエンジニアになることを目指すきっかけになりました！</p>
+      <p>　その目標に向かって、独学でプログラミングを学習を続けています。</p>
+      <p>実務経験は無くひよっこですが、早くから現場で働き、一人前のエンジニアとして成長していきたいと考えています。</p>
     </div>
   </section>
 
@@ -151,17 +152,20 @@ $_SESSION['csrf_token'] = $csrf_token;
   <article class="fade-in fade-in-down text-center works-wrapper p-8 max-w-7xl mx-auto">
     <section class="mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
-        <img class="w-full" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ">
+        <img class="w-full" src="./images/Portfolio.png" alt="ポートフォリオ">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2 mt-2">ぬいぐるみショップ</div>
+          <div class="font-bold text-xl mb-2">ポートフォリオ</div>
           <p class="text-gray-700 text-base">
-            かわいいぬいぐるみたちを心も穏やかに癒やされる、そんなぬいぐるみたちのショップです！
+            Who is Mizuki ?? 🤔
+            私がどういう人間かがざっとだけ分かります。
           </p>
+          <p>スキルセットや成果物を公開してます。</p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React.js</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Express.js</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Node.js</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML/CSS</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaScript</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PHP</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PHPUnit</span>
         </div>
       </div>
     </section>
@@ -178,10 +182,26 @@ $_SESSION['csrf_token'] = $csrf_token;
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML/CSS</span>
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Laravel</span>
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaScript</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Docker</span>
         </div>
       </div>
     </section>
-
+    <section class="mx-auto">
+      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
+        <img class="w-full" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 mt-2">ぬいぐるみショップ</div>
+          <p class="text-gray-700 text-base">
+            かわいいぬいぐるみたちを心も穏やかに癒やされる、そんなぬいぐるみたちのショップです！
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React.js</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Express.js</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Node.js</span>
+        </div>
+      </div>
+    </section>
     <section class="mx-auto">
       <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
         <img class="w-full" src="./images/Studious.png" alt="学習管理アプリ">
@@ -198,23 +218,7 @@ $_SESSION['csrf_token'] = $csrf_token;
       </div>
     </section>
 
-    <section class="mx-auto">
-      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
-        <img class="w-full" src="./images/Portfolio.png" alt="ポートフォリオ">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">ポートフォリオ</div>
-          <p class="text-gray-700 text-base">
-            Who is Patao ?? 🤔
-            ぱたおがどういう人間かがざっと分かります。
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML/CSS</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaScript</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PHP</span>
-        </div>
-      </div>
-    </section>
+
   </article>
   <section class="bg-gray-50">
     <h3 name="section" class="sub-header text-center relative text-4xl py-8 pb-4 px-4 border-cyan-500">CONTACT</h3>
