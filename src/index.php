@@ -55,11 +55,11 @@ $_SESSION['csrf_token'] = $csrf_token;
       <!-- Navigation Header Small -->
       <nav id="nav-header-small" class="sm:hidden invisible h-0 opacity-0 transition duration-700 bg-white">
         <ul>
-          <li name="nav-top" class="cursor-pointer py-4 border border-l-8 border-gray-400 pl-12 text-lg transition hover:border-black hover:text-cyan-300">TOP</li>
-          <li name="nav-profile" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">PROFILE</li>
-          <li name="nav-skill" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">SKILL</li>
-          <li name="nav-works" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">WORKS</li>
-          <li name="nav-contact" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">CONTACT</li>
+          <li name="hamburger-nav" class="cursor-pointer py-4 border border-l-8 border-gray-400 pl-12 text-lg transition hover:border-black hover:text-cyan-300">TOP</li>
+          <li name="hamburger-nav" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">PROFILE</li>
+          <li name="hamburger-nav" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">SKILL</li>
+          <li name="hamburger-nav" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">WORKS</li>
+          <li name="hamburger-nav" class="cursor-pointer border border-l-8 border-gray-400 pl-12 text-lg py-4 transition hover:border-black hover:text-cyan-300">CONTACT</li>
         </ul>
       </nav>
     </header>
@@ -84,7 +84,7 @@ $_SESSION['csrf_token'] = $csrf_token;
               <span id="signle-char-12">o</span>
               <span id="signle-char-13">l</span>
               <span id="signle-char-14">i</span>
-              <span id="signle-char-15zzz">o</span>
+              <span id="signle-char-15">o</span>
             </span>
           </div>
         </h2>
@@ -99,127 +99,161 @@ $_SESSION['csrf_token'] = $csrf_token;
         　はじめまして！こんにちは。平成15年生まれ、18歳のみずき<a href="https://twitter.com/Patao_program" class="text-cyan-500">@Patao_program</a>です。
       </p>
 
-      <p>　プログラミングは、高3の時に始めました。以来、プログラミングを使い、自分でものを作りだすということに、楽しさを覚え、サーバーサイドエンジニアになることを目指すきっかけになりました！</p>
-      <p>　その目標に向かって、独学でプログラミングを学習を続けています。</p>
-      <p>実務経験は無くひよっこですが、早くから現場で働き、一人前のエンジニアとして成長していきたいと考えています。</p>
+      <p>　プログラミングは、高校の時に始めました。以来、プログラミングを使い、自分でものを作りだすということに、楽しさを覚え、エンジニアになることを目指そうと思いました。</p>
+      <p>　完全に独学でプログラミングを学習を続けてきました。</p>
+      <p>　実務経験は無くひよっこですが、早くから現場で働き、一人前のエンジニアとして成長していきたいと考えています。</p>
     </div>
   </section>
 
   <div class="bg-gray-50">
     <h3 name="section" class="sub-header relative text-center text-4xl py-8 pb-4 border-cyan-500">SKILL</h3>
-    <div class="fade-in fade-in-up p-8 grid row-span-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <section class="text-center max-w-5xl mx-auto">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full h-60" src="./images/html-css-logo.jpg" alt="HTML & CSS">
-          <div class="font-bold text-xl mb-2">HTML & CSS</div>
-        </div>
-      </section>
-      <section class="text-center max-w-5xl mx-auto">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full h-60 object-cover" src="./images/javascript.png" alt="javascript">
-          <div class="font-bold text-xl mb-2">javascript</div>
-        </div>
-      </section>
-      <section class="text-center max-w-5xl mx-auto">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full h-60" src="./images/react.png" alt="React.js">
-          <div class="font-bold text-xl mb-2">React.js</div>
-        </div>
-      </section>
-      <section class="text-center max-w-5xl mx-auto">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full h-60" src="./images/node.png" alt="Node.js">
-          <div class="font-bold text-xl mb-2">Node.js</div>
-        </div>
-      </section>
-      <section class="text-center max-w-5xl mx-auto">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full h-60" src="./images/php.jpg" alt="PHP">
-          <div class="font-bold text-xl mb-2">PHP</div>
-        </div>
-      </section>
-      <section class="text-center max-w-5xl mx-auto">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full h-60" src="./images/laravel.jpg" alt="Laravel">
-          <div class="font-bold text-xl mb-2">Laravel</div>
-        </div>
-      </section>
+    <div class="fade-in fade-in-up ">
+      <div class="text-center m-4">
+        <p>アプリ開発の全体像の把握や自分の適性を確認したかったので、フロントからバックエンドまで一通りのことは勉強しました。</p>
+        <p>一つ一つの専門性が低いと自覚しているので、まずは、バックエンド一筋で極めていきたいと思っています。</p>
+      </div>
+      <div class="w-full p-8 grid row-span-2 md:grid-cols-2 justify-center items-center lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/html-css-logo.jpg" alt="HTML & CSS">
+            <div class="font-bold text-xl mb-2">HTML & CSS</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60 object-cover" src="./images/javascript.png" alt="javascript">
+            <div class="font-bold text-xl mb-2">javascript</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/react.png" alt="React.js">
+            <div class="font-bold text-xl mb-2">React.js</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/nodejsandexpress.png" alt="Node.js$Express.js">
+            <div class="font-bold text-xl mb-2">Node.js & Express.js</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/php.jpg" alt="PHP">
+            <div class="font-bold text-xl mb-2">PHP</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/laravel.jpg" alt="Laravel">
+            <div class="font-bold text-xl mb-2">Laravel</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/docker.png" alt="Laravel">
+            <div class="font-bold text-xl mb-2">Docker</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/mongo.png" alt="Laravel">
+            <div class="font-bold text-xl mb-2">MongoDB</div>
+          </div>
+        </section>
+        <section class="text-center w-full max-w-5xl mx-auto">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full h-60" src="./images/mariadb.jpg" alt="Laravel">
+            <div class="font-bold text-xl mb-2">MariaDB</div>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 
 
   <h3 name="section" class="sub-header text-center relative text-4xl my-8 pb-4 border-cyan-500">WORKS</h3>
-  <article class="fade-in fade-in-down text-center works-wrapper p-8 max-w-7xl mx-auto">
-    <section class="mx-auto">
-      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
-        <img class="w-full" src="./images/Portfolio.png" alt="ポートフォリオ">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">ポートフォリオ</div>
-          <p class="text-gray-700 text-base">
-            Who is Mizuki ?? 🤔
-            私がどういう人間かがざっとだけ分かります。
-          </p>
-          <p>スキルセットや成果物を公開してます。</p>
+  <div class="fade-in fade-in-down ">
+    <div class="text-center my-8 px-4">
+      <p>これまで作ってきたアプリの一部を公開しています！</p>
+      <p>使用した技術や機能についての詳細は、GitHubのREADME.mdに記載しています。</p>
+    </div>
+    <article class="text-center works-wrapper p-8 max-w-7xl mx-auto">
+      <section class="mx-auto">
+        <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
+          <img class="w-full cursor-pointer" src="./images/Portfolio.png" alt="ポートフォリオ" onclick="location.href='https://patao-program'">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://patao-program'">ポートフォリオ</div>
+            <p class="text-gray-700 text-base">
+              Who is Mizuki ?? 🤔
+              私がどういう人間かがざっとだけ分かります。
+            </p>
+            <p>スキルセットや成果物を公開してます。</p>
+          </div>
+          <a href="https://github.com/Patao150205/patao_portfolio" class="text-cyan-500 underline">GitHubへ</a>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML/CSS</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaScript</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PHP</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PHPUnit</span>
+          </div>
         </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML/CSS</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaScript</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PHP</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PHPUnit</span>
+      </section>
+      <section class="mx-auto">
+        <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
+          <img class="w-full cursor-pointer" src="./images/Quize_de_pon.png" alt="クイズでぽん！！" onclick="location.href='https://quize.patao-program'">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://quize.patao-program'">クイズでぽん！！</div>
+            <p class="text-gray-700 text-base">
+              暇なときに最適な暇つぶしになる投稿型のクイズアプリ！！
+            </p>
+          </div>
+          <a href="https://github.com/Patao150205/quize_de_pon" class="text-cyan-500 underline">GitHubへ</a>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML/CSS</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Laravel</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaScript</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Docker</span>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="mx-auto">
-      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
-        <img class="w-full" src="./images/Quize_de_pon.png" alt="クイズでぽん！！">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2 mt-2">クイズでぽん！！</div>
-          <p class="text-gray-700 text-base">
-            暇なときに最適な暇つぶしになる投稿型のクイズアプリ！！
-          </p>
+      </section>
+      <section class="mx-auto">
+        <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
+          <img class="w-full cursor-pointer" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ" onclick="location.href='https://blush-toy-shop.herokuapp.com/'">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://blush-toy-shop.herokuapp.com/'">ぬいぐるみショップ</div>
+            <p class="text-gray-700 text-base">
+              かわいい💗ぬいぐるみ達に、癒やされる、そんなぬいぐるみ専門のECショップです！
+            </p>
+          </div>
+          <a href="https://github.com/Patao150205/plush_toy_shop" class="text-cyan-500 block underline">GitHubへ</a>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React.js</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Express.js</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Node.js</span>
+          </div>
         </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#HTML/CSS</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Laravel</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#JavaScript</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Docker</span>
+      </section>
+      <section class="mx-auto">
+        <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
+          <img class="w-full cursor-pointer" src="./images/Studious.png" alt="学習管理アプリ" onclick="location.href='https://studious-two.vercel.app/home'">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 hover:text-cyan-600 cursor-pointer" onclick="location.href='https://studious-two.vercel.app/home'">学習管理アプリ</div>
+            <p class="text-gray-700 text-base">
+              日々の学習を記録できて、自動でグラフかもしてくれる！視覚的に学習状況のデータが得られるので、やる気アップできる学習管理アプリ
+            </p>
+          </div>
+          <a href="https://github.com/Patao150205/Studious" class="text-cyan-500 underline">GitHubへ</a>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React.js</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Firebase</span>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="mx-auto">
-      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
-        <img class="w-full" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2 mt-2">ぬいぐるみショップ</div>
-          <p class="text-gray-700 text-base">
-            かわいいぬいぐるみたちを心も穏やかに癒やされる、そんなぬいぐるみたちのショップです！
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React.js</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Express.js</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Node.js</span>
-        </div>
-      </div>
-    </section>
-    <section class="mx-auto">
-      <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden">
-        <img class="w-full" src="./images/Studious.png" alt="学習管理アプリ">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">学習管理アプリ</div>
-          <p class="text-gray-700 text-base">
-            日々の学習を記録できて、自動でグラフかもしてくれる！視覚的に学習状況のデータが得られるので、やる気アップできる学習管理アプリ
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#React.js</span>
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Firebase</span>
-        </div>
-      </div>
-    </section>
+      </section>
 
 
-  </article>
+    </article>
+  </div>
   <section class="bg-gray-50">
     <h3 name="section" class="sub-header text-center relative text-4xl py-8 pb-4 px-4 border-cyan-500">CONTACT</h3>
     <div class="fade-in fade-in-up text-center max-w-2xl mx-auto px-4">
