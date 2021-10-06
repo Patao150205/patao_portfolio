@@ -108,7 +108,7 @@ $_SESSION['csrf_token'] = $csrf_token;
   <div class="bg-gray-50">
     <h3 name="section" class="sub-header relative text-center text-4xl py-8 pb-4 border-cyan-500">SKILL</h3>
     <div class="fade-in fade-in-up ">
-      <div class="text-center m-4">
+      <div class="text-center mx4 mt-8">
         <p>アプリ開発の全体像の把握や自分の適性を確認したかったので、フロントからバックエンドまで一通りのことは勉強しました。</p>
         <p>一つ一つの専門性が低いと自覚しているので、まずは、バックエンド一筋で極めていきたいと思っています。</p>
       </div>

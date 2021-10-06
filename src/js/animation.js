@@ -2,7 +2,7 @@ const navHeaderSm = document.getElementById('nav-header-small');
 const hamburger = document.getElementById('hamburger');
 const toTopElement = document.getElementById('to-top');
 
-const headerHeight = 80;
+const headerHeight = 100;
 
 // ハンバーガーメニュー
 hamburger.onclick = function () {
@@ -22,13 +22,22 @@ function closeNavHeaderSm() {
   navHeaderSm.classList.add('opacity-0', 'invisible', 'h-0');
 }
 
-// ブラウザ幅を変えた時に更新
-window.onresize = function () {};
-
 // Nav Menu Items
 const navs = document.getElementsByName('nav');
 const hamburgerNavs = document.getElementsByName('hamburger-nav');
 const target = document.getElementsByName('section');
+
+let navTop1 = target[0].getBoundingClientRect().top + scrollY - headerHeight;
+let navTop2 = target[1].getBoundingClientRect().top + scrollY - headerHeight;
+let navTop3 = target[2].getBoundingClientRect().top + scrollY - headerHeight;
+let navTop4 = target[3].getBoundingClientRect().top + scrollY - headerHeight;
+// ブラウザ幅を変えた時に更新
+window.onresize = function () {
+  navTop1 = target[0].getBoundingClientRect().top + scrollY - headerHeight;
+  navTop2 = target[1].getBoundingClientRect().top + scrollY - headerHeight;
+  navTop3 = target[2].getBoundingClientRect().top + scrollY - headerHeight;
+  navTop4 = target[3].getBoundingClientRect().top + scrollY - headerHeight;
+};
 
 for (let i = 0; i < navs.length; i++) {
   if (i !== 0) {
@@ -57,11 +66,6 @@ for (let i = 0; i < hamburgerNavs.length; i++) {
     };
   }
 }
-
-const navTop1 = target[0].getBoundingClientRect().top + scrollY - headerHeight;
-const navTop2 = target[1].getBoundingClientRect().top + scrollY - headerHeight;
-const navTop3 = target[2].getBoundingClientRect().top + scrollY - headerHeight;
-const navTop4 = target[3].getBoundingClientRect().top + scrollY - headerHeight;
 
 function toggleNavMenuClass(nav_num) {
   for (let i = 0; i < navs.length; i++) {
