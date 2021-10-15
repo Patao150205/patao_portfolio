@@ -109,7 +109,7 @@ $_SESSION['csrf_token'] = $csrf_token;
     <h3 name="section" class="sub-header relative text-center text-4xl py-8 pb-4 border-cyan-500">SKILL</h3>
     <div class="fade-in fade-in-up ">
       <div class="text-center mx4 mt-8">
-        <p>アプリ開発の全体像の把握や自分の適性を確認したかったので、フロントからバックエンドまで一通りのことは勉強しました。</p>
+        <p>アプリ開発の全体像の把握や自分の適性を確認したかったので、フロントからバックエンド、インフラまで一通りのことは勉強しました。</p>
         <p>一つ一つの専門性が低いと自覚しているので、まずは、バックエンド一筋で極めていきたいと思っています。</p>
       </div>
       <div class="w-full p-8 grid row-span-2 md:grid-cols-2 justify-center items-center lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -183,10 +183,9 @@ $_SESSION['csrf_token'] = $csrf_token;
         <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
           <img class="w-full cursor-pointer" src="./images/Portfolio.png" alt="ポートフォリオ" onclick="location.href='https://patao-program'">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://patao-program'">ポートフォリオ</div>
+            <div class="font-bold text-xl mb-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://patapatao.com'">ポートフォリオ</div>
             <p class="text-gray-700 text-base">
-              Who is Mizuki ?? 🤔
-              私がどういう人間かがざっとだけ分かります。
+              Who is Patao ?? 🤔
             </p>
             <p>スキルセットや成果物を公開してます。</p>
           </div>
@@ -203,7 +202,7 @@ $_SESSION['csrf_token'] = $csrf_token;
         <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
           <img class="w-full cursor-pointer" src="./images/Quize_de_pon.png" alt="クイズでぽん！！" onclick="location.href='https://quize.patao-program'">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://quize.patao-program'">クイズでぽん！！</div>
+            <div class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://quize.patapatao.com'">クイズでぽん！！</div>
             <p class="text-gray-700 text-base">
               暇なときに最適な暇つぶしになる投稿型のクイズアプリ！！
             </p>

@@ -27,10 +27,18 @@ const navs = document.getElementsByName('nav');
 const hamburgerNavs = document.getElementsByName('hamburger-nav');
 const target = document.getElementsByName('section');
 
-let navTop1 = target[0].getBoundingClientRect().top + scrollY - headerHeight;
-let navTop2 = target[1].getBoundingClientRect().top + scrollY - headerHeight;
-let navTop3 = target[2].getBoundingClientRect().top + scrollY - headerHeight;
-let navTop4 = target[3].getBoundingClientRect().top + scrollY - headerHeight;
+let navTop1, navTop2, navTop3, navTop4;
+
+window.onload = () => {
+  navTop1 = target[0].getBoundingClientRect().top + scrollY - headerHeight;
+  navTop2 = target[1].getBoundingClientRect().top + scrollY - headerHeight;
+  navTop3 = target[2].getBoundingClientRect().top + scrollY - headerHeight;
+  navTop4 = target[3].getBoundingClientRect().top + scrollY - headerHeight;
+
+  toggleNavMenuClass();
+  fadeInContent();
+};
+
 // ブラウザ幅を変えた時に更新
 window.onresize = function () {
   navTop1 = target[0].getBoundingClientRect().top + scrollY - headerHeight;
@@ -89,8 +97,6 @@ function toggleHamburgerNavClass(nav_num) {
   }
 }
 
-toggleNavMenuClass();
-
 function fadeInContent() {
   const position = Math.floor(window.innerHeight * 0.75);
 
@@ -106,8 +112,6 @@ function fadeInContent() {
     }
   });
 }
-
-fadeInContent();
 
 window.onscroll = function () {
   // Nav Menu

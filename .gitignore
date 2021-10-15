@@ -2,3 +2,5 @@ node_modules
 public
 vendor
 .env
+
+docker-compose.prod.yaml
