@@ -5,7 +5,6 @@ services:
     container_name: 'portfolio_php_app'
     volumes:
       - .:/var/www/html
-      - ./docker/apache/vhost.conf:/etc/apache2/conf-enabled/vhost.conf
     ports:
       - '8080:80'
     networks:
