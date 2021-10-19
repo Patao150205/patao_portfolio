@@ -4,7 +4,7 @@
     ぱたおのポートフォリオ、自己紹介やこれまでに作り上げた作品などを公開しています。
 ---
 ## URL
-[ポートフォリオサイト](https://hoge)
+[ポートフォリオサイト](https://patapatao.com)
 
 ---
 ## 主な使用技術
@@ -50,10 +50,10 @@ ___
     javascriptの圧縮
     PHPの圧縮
 
-## 本番環境
+# 本番環境
     Docker
-    さくらvps
-サーバー構成の詳細(`README.md`)はこちら-> ***[patao_serverリポジトリ](https://github.com/Patao150205/patao_server)***    
+    自宅サーバー
+自宅サーバー構成の詳細(`README.md`)はこちら-> ***[patao_serverリポジトリ](https://github.com/Patao150205/patao_server)***    
 ___
 ## 苦労したこと・こだわったポイント
 
