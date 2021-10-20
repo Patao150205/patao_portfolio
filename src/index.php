@@ -17,6 +17,14 @@ $_SESSION['csrf_token'] = $csrf_token;
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/tailwind.css" />
   <link rel="stylesheet" href="./css/styles.css" />
+
+  <meta property="og:title" content="Mizukiポートフォリオ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://patapatao.com" />
+  <meta property="og:image" content="./images/Portfolio.png" />
+  <meta property="og:site_name" content="Mizukiポートフォリオ" />
+  <meta property="og:description" content="スキルや制作物を公開してます！！" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Mizuki Portfolio</title>
 </head>
 
