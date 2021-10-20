@@ -17,6 +17,14 @@ $_SESSION['csrf_token'] = $csrf_token;
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/tailwind.css" />
   <link rel="stylesheet" href="./css/styles.css" />
+
+  <meta property="og:title" content="Mizukiポートフォリオ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://patapatao.com" />
+  <meta property="og:image" content="./images/Portfolio.png" />
+  <meta property="og:site_name" content="Mizukiポートフォリオ" />
+  <meta property="og:description" content="スキルや制作物を公開してます！！" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Mizuki Portfolio</title>
 </head>
 
@@ -109,7 +117,7 @@ $_SESSION['csrf_token'] = $csrf_token;
     <h3 name="section" class="sub-header relative text-center  text-4xl py-8 pb-4 border-cyan-500">SKILL</h3>
     <div class="fade-in fade-in-up ">
       <div class="text-center mx4 mt-8">
-        <p>アプリ開発の全体像の把握や自分の適性を確認したかったので、フロントからバックエンド、インフラまで一通りのことは勉強しました。</p>
+        <p>アプリ開発の全体像の把握や自分の適性を確認したかったので、フロントからバックエンドまで一通りのことは勉強しました。</p>
         <p>一つ一つの専門性が低いと自覚しているので、まずは、バックエンド一筋で極めていきたいと思っています。</p>
       </div>
       <div class="w-full p-8 grid row-span-2 md:grid-cols-2 justify-center items-center lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
