@@ -21,7 +21,7 @@ $_SESSION['csrf_token'] = $csrf_token;
   <meta property="og:title" content="Mizukiポートフォリオ" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://patapatao.com" />
-  <meta property="og:image" content="./images/Portfolio.png" />
+  <meta property="og:image" content="https://patapatao.com/images/Portfolio.png" />
   <meta property="og:site_name" content="Mizukiポートフォリオ" />
   <meta property="og:description" content="スキルや制作物を公開してます！！" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -189,7 +189,7 @@ $_SESSION['csrf_token'] = $csrf_token;
     <article class="text-center works-wrapper p-8 max-w-7xl mx-auto">
       <section class="mx-auto">
         <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
-          <img class="w-full cursor-pointer" src="./images/Portfolio.png" alt="ポートフォリオ" onclick="location.href='https://patao-program'">
+          <img class="w-full cursor-pointer" src="./images/Portfolio.png" alt="ポートフォリオ" onclick="location.href='https://patapatao.com'">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://patapatao.com'">ポートフォリオ</div>
             <p class="text-gray-700 text-base">
@@ -208,7 +208,7 @@ $_SESSION['csrf_token'] = $csrf_token;
       </section>
       <section class="mx-auto">
         <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
-          <img class="w-full cursor-pointer" src="./images/Quize_de_pon.png" alt="クイズでぽん！！" onclick="location.href='https://quize.patao-program'">
+          <img class="w-full cursor-pointer" src="./images/Quize_de_pon.png" alt="クイズでぽん！！" onclick="location.href='https://quize.patapatao.com'">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://quize.patapatao.com'">クイズでぽん！！</div>
             <p class="text-gray-700 text-base">
