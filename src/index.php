@@ -14,9 +14,9 @@ $_SESSION['csrf_token'] = $csrf_token;
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./images/favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./css/tailwind.css" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/tailwind.css" />
+  <link rel="stylesheet" href="./css/fontawesome.css">
   <meta name="description" content="はじめまして！ぱたおといいます。このサイトは、エンジニアを目指すぱたおのポートフォリオサイトです！スキルや制作物などを公開しています。">
 
   <meta property="og:title" content="Mizukiポートフォリオ" />
