@@ -17,6 +17,7 @@ $_SESSION['csrf_token'] = $csrf_token;
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/tailwind.css" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <meta name="description" content="はじめまして！ぱたおといいます。このサイトは、エンジニアを目指すぱたおのポートフォリオサイトです！スキルや制作物などを公開しています。">
 
   <meta property="og:title" content="Mizukiポートフォリオ" />
   <meta property="og:type" content="website" />
@@ -101,7 +102,7 @@ $_SESSION['csrf_token'] = $csrf_token;
   </div>
   <h3 name="section" class="sub-header relative text-center text-4xl py-8 border-cyan-500">PROFILE</h3>
   <section class="fade-in fade-in-down text-center max-w-5xl space-y-8 py-16 mx-auto px-8 flex flex-col items-center sm:space-x-8 sm:space-y-0 sm:flex-row sm:justify-evenly">
-    <img src="./images/favicon.ico" class="rounded-full w-60 h-60 shadow-xl" />
+    <img src="./images/favicon.ico" class="rounded-full w-60 h-60 shadow-xl" alt="ぱたおのプロフィール画像" />
     <div class="max-w-lg text-left">
       <p>
         　はじめまして！こんにちは。平成15年生まれ、18歳のみずき<a href="https://twitter.com/Patao_program" class="text-cyan-500">@Patao_program</a>です。
@@ -141,7 +142,7 @@ $_SESSION['csrf_token'] = $csrf_token;
         </section>
         <section class="text-center w-full max-w-5xl mx-auto">
           <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img class="w-full h-60" src="./images/nodejsandexpress.png" alt="Node.js$Express.js">
+            <img class="w-full h-60" src="./images/nodejsandexpress.png" alt="Node.js&Express.js">
             <div class="font-bold text-xl mb-2">Node.js & Express.js</div>
           </div>
         </section>
@@ -159,19 +160,19 @@ $_SESSION['csrf_token'] = $csrf_token;
         </section>
         <section class="text-center w-full max-w-5xl mx-auto">
           <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img class="w-full h-60" src="./images/docker.png" alt="Laravel">
+            <img class="w-full h-60" src="./images/docker.png" alt="Docker">
             <div class="font-bold text-xl mb-2">Docker</div>
           </div>
         </section>
         <section class="text-center w-full max-w-5xl mx-auto">
           <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img class="w-full h-60" src="./images/mongo.png" alt="Laravel">
+            <img class="w-full h-60" src="./images/mongo.png" alt="MongoDB">
             <div class="font-bold text-xl mb-2">MongoDB</div>
           </div>
         </section>
         <section class="text-center w-full max-w-5xl mx-auto">
           <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img class="w-full h-60" src="./images/mariadb.jpg" alt="Laravel">
+            <img class="w-full h-60" src="./images/mariadb.jpg" alt="MariaDB">
             <div class="font-bold text-xl mb-2">MariaDB</div>
           </div>
         </section>
@@ -302,7 +303,8 @@ $_SESSION['csrf_token'] = $csrf_token;
     <div class="scroll"></div>
     TOPへ
   </div>
-  <script type="module" src="./js/index.js"></script>
+  <script src="./js/animation.js"></script>
+  <script src="./js/send-mail.js" defer></script>
 </body>
 
 </html>
