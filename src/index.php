@@ -153,7 +153,7 @@ $_SESSION['csrf_token'] = $csrf_token;
         </section>
         <section class="text-center w-full max-w-5xl mx-auto">
           <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img class="w-full h-60" src="./images/laravel.jpg" alt="Laravel">
+            <img class="w-full h-60" src="./images/laravel.png" alt="Laravel">
             <div class="font-bold text-xl mb-2">Laravel</div>
           </div>
         </section>
