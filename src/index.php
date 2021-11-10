@@ -227,9 +227,9 @@ $_SESSION['csrf_token'] = $csrf_token;
       </section>
       <section class="mx-auto">
         <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
-          <img class="w-full cursor-pointer" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ" onclick="location.href='https://blush-toy-shop.herokuapp.com/'">
+          <img class="w-full cursor-pointer" src="./images/Yuruhuwa.png" alt="ぬいぐるみショップ" onclick="location.href='https://plush-toy-shop.patapatao.com/'">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://blush-toy-shop.herokuapp.com/'">ぬいぐるみショップ</div>
+            <div class="font-bold text-xl mb-2 mt-2 cursor-pointer hover:text-cyan-600" onclick="location.href='https://plush-toy-shop.patapatao.com/'">ぬいぐるみショップ</div>
             <p class="text-gray-700 text-base">
               かわいい💗ぬいぐるみ達に、癒やされる、そんなぬいぐるみ専門のECショップです！
             </p>
@@ -244,9 +244,9 @@ $_SESSION['csrf_token'] = $csrf_token;
       </section>
       <section class="mx-auto">
         <div style="box-shadow: 0px 5px 10px #06b6d4" class="max-w-sm rounded overflow-hidden card-scale-up">
-          <img class="w-full cursor-pointer" src="./images/Studious.png" alt="学習管理アプリ" onclick="location.href='https://studious-two.vercel.app/home'">
+          <img class="w-full cursor-pointer" src="./images/Studious.png" alt="学習管理アプリ" onclick="location.href='https://studious.patapatao.com/home'">
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 hover:text-cyan-600 cursor-pointer" onclick="location.href='https://studious-two.vercel.app/home'">学習管理アプリ</div>
+            <div class="font-bold text-xl mb-2 hover:text-cyan-600 cursor-pointer" onclick="location.href='https://studious.patapatao.com/home'">学習管理アプリ</div>
             <p class="text-gray-700 text-base">
               日々の学習を記録できて、自動でグラフかもしてくれる！視覚的に学習状況のデータが得られるので、やる気アップできる学習管理アプリ
             </p>
